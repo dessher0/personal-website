@@ -23,7 +23,7 @@ def openai():
         if 'form_1' in request.form:
             input_text = request.form['TextResult']
             response = gpt3.text_model(input_text)
-            Result = response.replace('\n', '<br>')
+            Result = response.replace('\n', '')
 
     return render_template('openai.html', **locals())
 
