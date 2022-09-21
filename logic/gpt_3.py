@@ -5,7 +5,7 @@ import config
 
 openai.api_key = config.OPENAI_API_KEY
 
-def main(input_text):
+def text_model(input_text):
     response = openai.Completion.create(
     model="text-davinci-002",
     prompt=input_text,
