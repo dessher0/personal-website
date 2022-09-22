@@ -1,77 +1,37 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% extends 'layout.html' %}
 
-<head>
-    <meta charset="utf-8">
+{% block content %}
+<div class="container justify-content-center">
+    <h1 class="display-3 mt-5 text-center fw-bold">OpenAI Environment</h1>
 
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <br>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
-</head>
-
-<body>
-    <div class="container justify-content-center">
-        <h1 class="display-3 mt-5 text-center fw-bold">OpenAI Environment</h1>
-
-        <br>
-
-        <div class="card">
-            <div class="card-body">
-                <form class="" action="/openai" method="post">
-                    <div class="row">
-                        <div class="col">
-                            <textarea class="form-control" style="resize: none;" id="TextResult" name="TextResult"
-                                cols="80" rows="10" placeholder="Enter your task / question for the AI.">{{input_text|safe}}</textarea>
-                        </div>
-                        <div class="col-2 text-center">
-                            <div class="row align-items-center h-100">
-                                <div class="col">
-                                    <input type="hidden" name="form_1" value="form_1">
-                                    <button type="submit" id="TextResultButton" class="btn btn-primary w-50">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </button>
-                                </div>
+    <div class="card">
+        <div class="card-body">
+            <form class="" action="/openai" method="post">
+                <div class="row box">
+                    <div class="col">
+                        <textarea class="form-control" style="resize: none;" id="TextResult" name="TextResult" cols="80"
+                            rows="10"
+                            placeholder="Enter your task / question for the AI.">{{input_text|safe}}</textarea>
+                    </div>
+                    <div class="col-2 text-center">
+                        <div class="row align-items-center h-100">
+                            <div class="col">
+                                <input type="hidden" name="form_1" value="form_1">
+                                <button type="submit" id="TextResultButton" class="btn btn-primary w-50">
+                                    <i class="fa fa-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="col">
-                            <textarea readonly class="form-control" style="resize: none;" cols="80" rows="10"
-                                placeholder="Your result will be displayed here.">{{Result|safe}}</textarea>
-                        </div>
                     </div>
-            </div>
+                    <div class="col">
+                        <textarea readonly class="form-control" style="resize: none;" cols="80" rows="10"
+                            placeholder="Your result will be displayed here.">{{Result|safe}}</textarea>
+                    </div>
+                </div>
+            </form>
         </div>
-        </form>
     </div>
-    </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    
-    <!-- Awesome Fonts -->
-    <script src="https://kit.fontawesome.com/1d217afb8f.js" crossorigin="anonymous"></script>
-
-</body>
-
-<script>
-    if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
-    }
-</script>
-
-</html>
+</div>
+{% endblock %}
