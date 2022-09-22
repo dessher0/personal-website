@@ -18,7 +18,6 @@ def index():
 
 @app.route('/openai', methods=["GET", "POST"])
 def openai():
-
     if request.method == 'POST':
         if 'form_1' in request.form:
             input_text = request.form['TextResult']
