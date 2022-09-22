@@ -4,7 +4,7 @@ import config
 
 
 def page_not_found(e):
-  return render_template('error_404.html'), 404
+  return render_template('parts/error_404.html'), 404
 
 
 app = Flask(__name__)
@@ -22,6 +22,7 @@ def openai():
         if 'form_1' in request.form:
             input_text = request.form['TextResult']
             response = gpt3.text_model(input_text)
+            response = response[2:]
             Result = response.replace('?', '')
 
     return render_template('openai.html', **locals())

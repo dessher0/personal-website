@@ -1,0 +1,26 @@
+{%block header%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+
+    <!-- Add Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+</head>
+{% endblock %}
+
+<body class="flex flex-col h-screen bg-base-100 font-sans leading-normal tracking-normal">
+    {% include 'parts/navbar.html' %}
+    {% block content %}
+    
+    {% endblock %}
+</body>
+{% include 'parts/scripts.html' %}
+</html>
