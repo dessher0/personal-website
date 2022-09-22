@@ -7,7 +7,7 @@ openai.api_key = config.OPENAI_API_KEY
 
 def text_model(input_text):
     response = openai.Completion.create(
-    model="text-curie-001",
+    model="text-davinci-002",
     prompt=input_text,
     temperature=0.3,
     max_tokens=256,
