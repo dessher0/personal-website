@@ -1,24 +1,25 @@
 <div class="navbar bg-base-100 sticky top-0">
   <div class="navbar-start">
     <!-- Left of Navbar -->
-    <div class="dropdown">
-      <label tabindex="0" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </label>
-      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a href="/openai">OpenAI</a></li>
-      </ul>
-    </div>
-    <div class="w-10 mr-5">
-      <img src="{{ url_for('static', filename='images/favicon.png') }}" class="logo h-full object-fit" alt="Logo">
-    </div>
-    <a class="btn btn-ghost normal-case text-xl no-animation" href="/">Home</a>
-    <a class="btn btn-ghost normal-case text-xl no-animation" href="/openai">OpenAI</a>
+    <img src="{{ url_for('static', filename='images/favicon.png') }}" class="logo h-full object-fit w-10 mr-5" alt="Logo">
   </div>
   <div class="navbar-center hidden lg:flex">
     <!-- Middle of Navbar -->
   </div>
   <div class="navbar-end">
     <!-- Right of Navbar -->
+    <div class="dropdown dropdown-left">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/">Home</a></li>
+        <li><a href="/openai">OpenAI</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost normal-case text-xl no-animation hidden lg:flex" href="/">Home</a>
+    <a class="btn btn-ghost normal-case text-xl no-animation hidden lg:flex" href="/openai">OpenAI</a>
   </div>
 </div>
