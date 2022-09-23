@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100 sticky top-0">
+<div class="navbar bg-base-100 sticky top-0 z-10">
   <div class="navbar-start">
     <!-- Left of Navbar -->
     <img src="{{ url_for('static', filename='images/favicon.png') }}" class="logo h-full object-fit w-10 mr-5" alt="Logo">
@@ -15,11 +15,15 @@
         </svg>
       </label>
       <ul tabindex="0" class="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a href="/">Home</a></li>
+        <li><a href="/">Startseite</a></li>
         <li><a href="/openai">OpenAI</a></li>
+        <li><a href="/projects">Projekte</a></li>
+        <li><a href="/contact">Kontakt</a></li>
       </ul>
     </div>
-    <a class="btn btn-ghost normal-case text-xl no-animation hidden lg:flex" href="/">Home</a>
+    <a class="btn btn-ghost normal-case text-xl no-animation hidden lg:flex" href="/">Startseite</a>
     <a class="btn btn-ghost normal-case text-xl no-animation hidden lg:flex" href="/openai">OpenAI</a>
+    <a class="btn btn-ghost normal-case text-xl no-animation hidden lg:flex" href="/projects">Projekte</a>
+    <a class="btn btn-ghost normal-case text-xl no-animation hidden lg:flex" href="/contact">Kontakt</a>
   </div>
 </div>
