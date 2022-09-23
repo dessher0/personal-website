@@ -1,3 +1,6 @@
+from datetime import datetime
+
+CURRENT_YEAR = datetime.now().year
 OPENAI_API_KEY = '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'
 
 
