@@ -29,9 +29,18 @@ def openai():
             response = gpt3.text_model(input_text)
             response = response[2:]
             Result = response.replace('?', '')
-
-
     return render_template('openai.html', **locals())
+
+
+# @app.route('/projects')
+# def projects():
+#     return render_template('projects.html', **locals())
+
+# @app.route('/contact')
+# def contact():
+#     return render_template('contact.html', **locals())
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='8888', debug=True)
