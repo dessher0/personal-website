@@ -10,7 +10,8 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = "8473b9c0-5b6c-11eb-ae93-0242ac130002"
     
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///databases/database.db'
+    DB_NAME = 'database.db'
+    SQLALCHEMY_DATABASE_URI = f'sqlite:///databases/{DB_NAME}'
     
     CURRENT_YEAR = datetime.now().year
 
