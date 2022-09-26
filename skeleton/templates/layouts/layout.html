@@ -6,17 +6,15 @@
 
 {% endblock %}
 
-<body class="flex flex-col h-screen bg-base-100 font-sans leading-normal tracking-normal">
+<body class="flex flex-col h-screen min-h-screen bg-base-100 font-sans leading-normal tracking-normal">
     {% include 'parts/navbar.html' %}
     {% block content %}
 
     {% endblock %}
-    {% include 'parts/scroll_button.html' %}
+    <footer class="footer footer-center p-4 bg-base-200 text-base-content rounded mt-auto">
+        {% include 'parts/footer.html' %}
+    </footer>
 </body>
-
-<footer class="footer footer-center p-4 bg-base-200 text-base-content rounded mt-32">
-    {% include 'parts/footer.html' %}
-</footer>
 
 {% include 'parts/scripts.html' %}
 
