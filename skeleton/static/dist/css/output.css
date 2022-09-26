@@ -3216,6 +3216,10 @@ html {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -3234,6 +3238,10 @@ html {
 
 .right-10 {
   right: 2.5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .z-10 {
@@ -3268,6 +3276,11 @@ html {
 .-mx-3 {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mb-4 {
@@ -3342,6 +3355,26 @@ html {
   margin-bottom: 0.75rem;
 }
 
+.mt-96 {
+  margin-top: 24rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
 .block {
   display: block;
 }
@@ -3376,6 +3409,10 @@ html {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .max-h-3 {
@@ -3414,6 +3451,10 @@ html {
   max-height: 24rem;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-full {
   width: 100%;
 }
@@ -3444,6 +3485,38 @@ html {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .max-w-screen-md {
@@ -3484,6 +3557,10 @@ html {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -3502,6 +3579,10 @@ html {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-4 {
@@ -3669,6 +3750,16 @@ html {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .text-left {
@@ -3968,6 +4059,10 @@ html {
 }
 
 @media (min-width: 640px) {
+  .sm\:absolute {
+    position: absolute;
+  }
+
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -3991,6 +4086,10 @@ html {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-40 {
+    width: 10rem;
   }
 }
 
@@ -4018,8 +4117,16 @@ html {
     width: 1rem;
   }
 
+  .lg\:fixed {
+    position: fixed;
+  }
+
   .lg\:mb-16 {
     margin-bottom: 4rem;
+  }
+
+  .lg\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .lg\:flex {
@@ -4028,6 +4135,10 @@ html {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:flex-row {
