@@ -1,22 +1,36 @@
 {% extends 'layouts/layout.html' %}
 
 {% block content %}
-<section class="relative h-full pt-10">
-    <div class="text-center flex items-center justify-center h-full">
-        <div class="row">
+<section class="relative h-full">
+    <div class="text-center flex items-center justify-center h-full py-8 lg:py-16 mx-auto">
+        <div class="row animate__animated animate__fadeIn animate__delay-.3s">
             <div class="col">
-                <h1 class="text-6xl font-bold">STARTSEITE</h1>
+                <h1 class="text-5xl font-extrabold">MACIEJ KULA</h1>
             </div>
             <div class="col">
                 <p class="text-md">
-                    (Diese Seite ist in <span class="text-warning">Entwicklung</span>!)
+                    (Spezialisiert in <span class="text-error">Physik und IT</span>)
                 </p>
             </div>
-            <div class="col mt-24">
+            <div class="col mt-14 ml-2">
+                <div class="mockup-code text-left w-auto">
+                    <pre
+                        data-prefix="1"><code><code class="text-error">import</code><code class="text-purple-400"> browser</code></pre>
+                    <pre data-prefix="2"><code></code></pre>
+                    <pre
+                        data-prefix="3"><code><code class="text-error">def</code> visit(</code><code class="text-warning">url</code><code>)</code></pre>
+                    <pre
+                        data-prefix="4"><code>    </code><code class="text-purple-400">browser</code>.<code>open</code>(</code><code class="text-warning">url</code><code>)</code></pre>
+                    <pre data-prefix="5"><code></code></pre>
+                    <pre data-prefix="6"
+                        class="bg-error text-error-content"><code>visit('<a class="hover:animate-pulse hover:text-base-100" href="https://github.com/dessher0" target="_blank" rel="noopener noreferrer">https://github.com/dessher0'</a>)</code></pre>
+                </div>
+            </div>
+            <div class="col ml-3 mt-20">
                 <div class="text-xl font-bold mb-5">
                     <p>Bereits Erfahrung mit:</p>
                 </div>
-                <div class="grid grid-cols-5 gap-4 w-96">
+                <div class="grid grid-cols-5 gap-4 w-96 ml-2.5">
                     <div>
                         <img src="/static/svg/laravel.svg" alt="Laravel">
                     </div>
