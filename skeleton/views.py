@@ -47,7 +47,7 @@ def openai():
 
 
 @views.route('/contact', methods=["GET", "POST"])
-@limiter.limit("10/day")
+@limiter.limit("10/hour")
 def contact():
     if request.method == 'POST':
         if 'contact_form' in request.form:
