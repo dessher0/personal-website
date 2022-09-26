@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-from flask_debugtoolbar import DebugToolbarExtension
 from os import path
 from .config import config
 
@@ -29,8 +28,6 @@ def create_app():
 
     app.register_blueprint(views, url_prefix='/')
     create_database(app)
-
-    toolbar = DebugToolbarExtension(app)
 
     return app
 

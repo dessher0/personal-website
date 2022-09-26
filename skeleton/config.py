@@ -2,7 +2,7 @@ from datetime import datetime
 
 
 class Config(object):
-    DEBUG = False
+    DEBUG = True
     TESTING = False
 
 
