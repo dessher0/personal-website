@@ -70,6 +70,6 @@ def webhook():
         origin = repo.remotes.origin
         origin.pull()
     
-        return 'Updated successfully.', 200
+        return 'Updated.', 200
     else:
-        return 'Wrong event type.', 400
+        return 'Failed.', 400
