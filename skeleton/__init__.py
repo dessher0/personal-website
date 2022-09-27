@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 from .config import config
@@ -19,11 +19,14 @@ def create_app():
     from .views import views
 
     def page_not_found(e):
-        return render_template('error/error_404.html'), 404
+        return render_template('errors/404.html'), 404
+    def method_not_allowed(e):
+        return render_template('errors/405.html'), 405
     def too_many_requests(e):
-        return render_template('error/error_429.html'), 429
+        return render_template('errors/429.html'), 429
     
     app.register_error_handler(404, page_not_found)
+    app.register_error_handler(405, method_not_allowed)
     app.register_error_handler(429, too_many_requests)
 
     app.register_blueprint(views, url_prefix='/')
