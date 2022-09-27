@@ -1,10 +1,14 @@
-from flask import Blueprint, render_template, request
+from crypt import methods
+from symbol import decorators
+from flask import Blueprint, render_template, request, redirect
 from flask_mail import Mail, Message
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from .config import config
 from . import db, g_app
 from .modules.gpt3 import gpt3
+
+import git
 
 views = Blueprint('views', __name__)
 mail = Mail(g_app)
@@ -20,7 +24,6 @@ def process():
 
 @views.route('/')
 def index():
-
     return render_template('index.html', **locals())
 
 
@@ -47,21 +50,26 @@ def openai():
 
 
 @views.route('/contact', methods=["GET", "POST"])
-@limiter.limit("10/hour")
 def contact():
     if request.method == 'POST':
         if 'contact_form' in request.form:
-            name = request.form['name']
-            email = request.form['email']
-            subject = request.form['subject']
-            message = request.form['message']
 
-            msg = Message(subject, sender=email, recipients=[
-                          'website@mcjkula.com'])
-            msg.body = msg.body = 'Nachricht von ' + name + ',\n \n' + \
-                message + '\n \n' + 'Melden an diese E-Mail: ' + email
-            msg.html = render_template(
-                '/mails/contact_mail.html', name=name, message=message, email=email)
-            mail.send(msg)
+            return redirect('/contact/success')
+        
+    return render_template('contact/form_page.html', **locals())
 
-    return render_template('contact.html', **locals())
+@views.route('/contact/success', methods=["POST"])
+@limiter.limit("5/day")
+def contact_success():
+    return render_template('contact/success.html', **locals())
+
+@views.route('/update', methods=['POST'])
+def webhook():
+    if request.method == 'POST':
+        repo = git.Repo('./test')
+        origin = repo.remotes.origin
+        origin.pull()
+    
+        return 'Updated successfully.', 200
+    else:
+        return 'Wrong event type.', 400
