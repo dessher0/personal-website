@@ -27,6 +27,7 @@
                         </div>
                     </form>
                 </div>
+<<<<<<< Updated upstream
                 <div class="divider lg:divider-horizontal ghost"></div>
                 <div class="card grid bg-gray-100 mt-10 flex-grow">
                     <div class="card-title">
@@ -39,6 +40,18 @@
                     <div class="card-actions justify-end mb-5 mr-5 ghost">
                         <input type="hidden">
                         <button type="" class="btn px-10">
+=======
+                <form class="" action="/openai" method="post" onsubmit="showLoading()">
+                    <div class="card-body">
+                        <textarea required class="focus:outline-none resize-none w-full bg-gray-100" id="TextResult"
+                            name="TextResult" rows="15"
+                            placeholder="Gib deine Frage / Aufgabe für die KI an.">{{input_text|safe}}</textarea>
+                    </div>
+                    <div class="card-actions justify-end mb-5 mr-5">
+                        <input type="hidden" name="ai_form" value="ai_form">
+                        <button type="submit" id="TextResultButton"
+                            class="btn w-24 bg-gradient-to-r from-pink-500 to-yellow-400 border-none">
+>>>>>>> Stashed changes
                             <i class="fa fa-arrow-right" id="TextResultButtonIcon"></i>
                         </button>
                     </div>
