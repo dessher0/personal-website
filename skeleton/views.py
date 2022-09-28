@@ -69,4 +69,4 @@ def contact_success():
             
         mail.send(msg)
     
-        return render_template('contact/success.html', **locals())
+    return render_template('contact/success.html', **locals())
