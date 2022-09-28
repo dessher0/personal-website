@@ -3479,6 +3479,10 @@ body[dir="rtl"] .checkbox:checked,
   margin-top: auto;
 }
 
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
