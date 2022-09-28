@@ -57,11 +57,10 @@ def contact():
             subject = request.form['subject']
             message = request.form['message']
 
-            msg = Message(subject, sender=email, recipients=['website@mcjkula.com'])
-            msg.body = msg.body = 'Nachricht von ' + name + ',\n \n' + \
-                message + '\n \n' + 'Melden an diese E-Mail: ' + email
-            msg.html = render_template(
-                '/mails/contact_mail.html',name=name, message=message, email=email)
+            msg = Message(subject, sender=config['development'].MAIL_DEFAULT_SENDER, recipients=['website@mcjkula.com'])
+            msg.body = 'Nachricht von ' + name + ',\n \n' + message + '\n \n' + 'Melden an diese E-Mail: ' + email
+            msg.html = render_template('/mails/contact_mail.html',name=name, message=message, email=email)
+            
             mail.send(msg)
 
             return redirect('/contact/success')

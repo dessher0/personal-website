@@ -42,5 +42,3 @@ def indent_app(app):
 def create_database(app):
     if not path.exists('skeleton/databases/' + app.config['DB_NAME']):
         db.create_all(app=app)
-    else:
-        pass
