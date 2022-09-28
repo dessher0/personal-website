@@ -8,7 +8,6 @@ from .config import config
 from . import db, g_app
 from .modules.gpt3 import gpt3
 
-import git
 
 views = Blueprint('views', __name__)
 mail = Mail(g_app)
@@ -55,21 +54,11 @@ def contact():
         if 'contact_form' in request.form:
 
             return redirect('/contact/success')
-        
+
     return render_template('contact/form_page.html', **locals())
+
 
 @views.route('/contact/success', methods=["POST"])
 @limiter.limit("5/day")
 def contact_success():
     return render_template('contact/success.html', **locals())
-
-@views.route('/update', methods=['POST'])
-def webhook():
-    if request.method == 'POST':
-        repo = git.Repo('./test')
-        origin = repo.remotes.origin
-        origin.pull()
-    
-        return 'Updated.', 200
-    else:
-        return 'Failed.', 400
