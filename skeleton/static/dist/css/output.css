@@ -3916,11 +3916,6 @@ body[dir="rtl"] .checkbox:checked,
   color: hsl(var(--b1) / var(--tw-text-opacity));
 }
 
-.hover\:hover\:text-base-100:hover:hover {
-  --tw-text-opacity: 1;
-  color: hsl(var(--b1) / var(--tw-text-opacity));
-}
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
