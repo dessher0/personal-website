@@ -2,7 +2,9 @@
 
 {% block content %}
 <section class="relative h-full">
-    <div class="flex items-center justify-center h-full -mt-10 py-8 lg:py-16 px-4 mx-auto max-w-screen-md animate__animated animate__fadeIn animate__delay-.3s">
+    <div class="items-center justify-center h-full mx-auto animate__animated animate__fadeIn animate__delay-.3s">
+        {% include 'parts/navbar.html' %}
+        <div class="flex justify-center mt-28 py-8 lg:py-16 px-4">
             <div class="text-center">
                 <h1 class="text-6xl text-transparent bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text font-extrabold animate__animated animate__lightSpeedInLeft">GESENDET!</h1>
                 <p class="text-xl m-5">
@@ -10,6 +12,7 @@
                 </p>
                 <a href="/" class="btn bg-gradient-to-r from-pink-500 to-yellow-400 border-none">Zur Startseite</a>
             </div>
+        </div>
     </div>
 </section>
 {% endblock %}

@@ -2,46 +2,46 @@
 
 {% block content %}
 <section class="relative h-full">
-    <div
-        class="container justify-center mx-auto h-full py-8 lg:py-16 px-4 animate__animated animate__fadeIn animate__delay-.3s">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">OpenAI</h2>
-        <div class="flex flex-col w-full lg:flex-row">
-            <div class="card grid bg-gray-100 mt-10 flex-grow">
-                <div class="card-title">
-                    <h1 class="text-2xl font-bold text-center mt-5 ml-5">Eingabe</h1>
-                </div>
-                <form class="" action="/openai" method="post">
-                    <div class="card-body">
-                        <textarea class="focus:outline-none resize-none w-full bg-gray-100" id="TextResult"
-                            name="TextResult" rows="15"
-                            placeholder="Gib deine Frage / Aufgabe für die KI an.">{{input_text|safe}}</textarea>
+    <div class="justify-center mx-auto h-full animate__animated animate__fadeIn animate__delay-.3s">
+        {% include 'parts/navbar.html' %}
+        <div class="mx-0 lg:mx-10 py-8 lg:py-16 px-4">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">OpenAI</h2>
+            <div class="flex flex-col w-full lg:flex-row">
+                <div class="card grid bg-gray-100 mt-10 flex-grow">
+                    <div class="card-title">
+                        <h1 class="text-2xl font-bold text-center mt-5 ml-5">Eingabe</h1>
                     </div>
-                    <div class="card-actions justify-end mb-5 mr-5">
-                        <input type="hidden" name="ai_form" value="ai_form">
-                        <button type="submit" id="TextResultButton"
-                            class="btn w-24 bg-gradient-to-r from-pink-500 to-yellow-400 border-none"
-                            onclick="showLoading()">
+                    <form class="" action="/openai" method="post">
+                        <div class="card-body">
+                            <textarea class="focus:outline-none resize-none w-full bg-gray-100" id="TextResult"
+                                name="TextResult" rows="15"
+                                placeholder="Gib deine Frage / Aufgabe für die KI an.">{{input_text|safe}}</textarea>
+                        </div>
+                        <div class="card-actions justify-end mb-5 mr-5">
+                            <input type="hidden" name="ai_form" value="ai_form">
+                            <button type="submit" id="TextResultButton"
+                                class="btn w-24 bg-gradient-to-r from-pink-500 to-yellow-400 border-none"
+                                onclick="showLoading()">
+                                <i class="fa fa-arrow-right" id="TextResultButtonIcon"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="divider lg:divider-horizontal ghost"></div>
+                <div class="card grid bg-gray-100 mt-10 flex-grow">
+                    <div class="card-title">
+                        <h1 class="text-2xl font-bold text-center mt-5 ml-5">Ausgabe</h1>
+                    </div>
+                    <div class="card-body">
+                        <textarea readonly class="cursor-default focus:outline-none resize-none w-full bg-gray-100"
+                            rows=" 15" placeholder="">{{Result|safe}}</textarea>
+                    </div>
+                    <div class="card-actions justify-end mb-5 mr-5 ghost">
+                        <input type="hidden">
+                        <button type="" class="btn px-10">
                             <i class="fa fa-arrow-right" id="TextResultButtonIcon"></i>
                         </button>
                     </div>
-                </form>
-            </div>
-
-            <div class="divider lg:divider-horizontal ghost"></div>
-
-            <div class="card grid bg-gray-100 mt-10 flex-grow">
-                <div class="card-title">
-                    <h1 class="text-2xl font-bold text-center mt-5 ml-5">Ausgabe</h1>
-                </div>
-                <div class="card-body">
-                    <textarea readonly class="cursor-default focus:outline-none resize-none w-full bg-gray-100"
-                        rows=" 15" placeholder="">{{Result|safe}}</textarea>
-                </div>
-                <div class="card-actions justify-end mb-5 mr-5 ghost">
-                    <input type="hidden">
-                    <button type="" class="btn px-10">
-                        <i class="fa fa-arrow-right" id="TextResultButtonIcon"></i>
-                    </button>
                 </div>
             </div>
         </div>
