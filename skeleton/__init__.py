@@ -1,9 +1,11 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template
+from flask_compress import Compress
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 from .config import config
 
 db = SQLAlchemy()
+compress = Compress()
 g_app = None
 
 
@@ -14,6 +16,7 @@ def create_app():
     app.config.from_object(config['development'])
     db.init_app(app)
 
+    compress.init_app(app)
     g_app = indent_app(app)
 
     from .views import views
