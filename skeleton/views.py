@@ -1,6 +1,7 @@
 from crypt import methods
+from nturl2path import url2pathname
 from symbol import decorators
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, url_for
 from flask_mail import Mail, Message
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -50,25 +51,22 @@ def openai():
 
 @views.route('/contact', methods=["GET", "POST"])
 def contact():
-    if request.method == 'POST':
-        if 'contact_form' in request.form:
-            name = request.form['name']
-            email = request.form['email']
-            subject = request.form['subject']
-            message = request.form['message']
-
-            msg = Message(subject, sender=config['development'].MAIL_DEFAULT_SENDER, recipients=['website@mcjkula.com'])
-            msg.body = 'Nachricht von ' + name + ',\n \n' + message + '\n \n' + 'Melden an diese E-Mail: ' + email
-            msg.html = render_template('/mails/contact_mail.html',name=name, message=message, email=email)
-            
-            mail.send(msg)
-
-            return redirect('/contact/success')
-
     return render_template('contact/form_page.html', **locals())
 
 
 @views.route('/contact/success', methods=["POST"])
 @limiter.limit("5/day")
 def contact_success():
-    return render_template('contact/success.html', **locals())
+    if 'contact_form' in request.form:
+        name = request.form['name']
+        email = request.form['email']
+        subject = request.form['subject']
+        message = request.form['message']
+    
+        msg = Message(subject, sender=config['development'].MAIL_DEFAULT_SENDER, recipients=['website@mcjkula.com'])
+        msg.body = 'Nachricht von ' + name + ',\n \n' + message + '\n \n' + 'Melden an diese E-Mail: ' + email
+        msg.html = render_template('/mails/contact_mail.html',name=name, message=message, email=email)
+            
+        mail.send(msg)
+    
+        return render_template('contact/success.html', **locals())
