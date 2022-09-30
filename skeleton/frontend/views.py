@@ -1,19 +1,21 @@
-from crypt import methods
-from nturl2path import url2pathname
-from symbol import decorators
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_mail import Mail, Message
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+<<<<<<< Updated upstream:skeleton/views.py
 from .config import config
 from . import g_app, db
 from .modules.gpt3 import gpt3
+=======
+from ..config import config
+from .. import db, g_app
+from ..modules.gpt3 import gpt3
+>>>>>>> Stashed changes:skeleton/frontend/views.py
 
 
 views = Blueprint("views", __name__)
 mail = Mail(g_app)
 limiter = Limiter(g_app, key_func=get_remote_address)
-
 
 @views.context_processor
 def process():
@@ -24,8 +26,12 @@ def process():
 
 @views.route("/")
 def index():
+<<<<<<< Updated upstream:skeleton/views.py
     return render_template("index.html", **locals())
 
+=======
+    return render_template('/general/index.html', **locals())
+>>>>>>> Stashed changes:skeleton/frontend/views.py
 
 @views.route("/about")
 def about():

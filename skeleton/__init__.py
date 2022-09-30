@@ -19,8 +19,13 @@ def create_app():
 
     g_app = app
 
+<<<<<<< Updated upstream
     from .views import views
     from .models import User
+=======
+    from .frontend.views import views
+    from .frontend.js.routing import js_views
+>>>>>>> Stashed changes
 
     def page_not_found(e):
         return render_template("errors/404.html"), 404
@@ -29,21 +34,37 @@ def create_app():
         return render_template("errors/405.html"), 405
 
     def too_many_requests(e):
+<<<<<<< Updated upstream
         return render_template("errors/429.html"), 429
+=======
+        return render_template('errors/429.html'), 429
+>>>>>>> Stashed changes
 
     app.register_error_handler(404, page_not_found)
     app.register_error_handler(405, method_not_allowed)
     app.register_error_handler(429, too_many_requests)
 
+<<<<<<< Updated upstream
     app.register_blueprint(views, url_prefix="/")
+=======
+    app.register_blueprint(views, url_prefix='/')
+    app.register_blueprint(js_views, url_prefix='/js/')
+    
+    create_database(app)
+>>>>>>> Stashed changes
 
     app.app_context().push()
     db.create_all()
 
     compress.init_app(app)
 
+<<<<<<< Updated upstream
     return app
 
 
 def indent_app(app):
     return app
+=======
+def indent_app(app):
+    return app
+>>>>>>> Stashed changes

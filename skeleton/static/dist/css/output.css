@@ -3523,6 +3523,18 @@ body[dir="rtl"] .checkbox:checked,
   max-height: 20rem;
 }
 
+.max-h-20 {
+  max-height: 5rem;
+}
+
+.max-h-60 {
+  max-height: 15rem;
+}
+
+.max-h-56 {
+  max-height: 14rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
