@@ -2,4 +2,3 @@
 skeleton/config.py
 skeleton/databases/database.db
 deploy.py
-deploy.py
