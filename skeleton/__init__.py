@@ -19,7 +19,7 @@ def create_app():
 
     g_app = app
 
-    from .frontend.views import views
+    from .frontend.general.routing import views
     from .frontend.js.routing import js_views
 
     from .models import User

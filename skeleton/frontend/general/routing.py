@@ -2,9 +2,9 @@ from flask import Blueprint, render_template, request
 from flask_mail import Mail, Message
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from ..config import config
-from .. import db, g_app
-from ..modules.gpt3 import gpt3
+from ...config import config
+from ... import db, g_app
+from ...apps.gpt3 import gpt3
 
 
 views = Blueprint("views", __name__)
