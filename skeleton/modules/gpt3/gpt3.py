@@ -2,7 +2,7 @@ import openai
 from ...config import config
 
 
-openai.api_key = config['development'].OPENAI_API_KEY
+openai.api_key = config["development"].OPENAI_API_KEY
 
 
 def text_model(input_text):
@@ -16,4 +16,4 @@ def text_model(input_text):
         presence_penalty=0.0,
     )
 
-    return response['choices'][0]['text']
+    return response["choices"][0]["text"]
