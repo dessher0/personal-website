@@ -2191,6 +2191,10 @@ html {
   border-bottom-right-radius: var(--rounded-box, 1rem);
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .static {
   position: static;
 }
