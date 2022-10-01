@@ -22,7 +22,7 @@ def create_app():
     from .frontend.general.routing import views
     from .frontend.js.routing import js_views
 
-    from .models import User
+    from .models.user import User
 
     def page_not_found(e):
         return render_template("errors/404.html"), 404
