@@ -1,10 +1,9 @@
 <div
-	x-data="{ showButton: false }"
-	x-init="window.scrollTo({top: 0, behavior: 'smooth'})">
+	x-data="{ showButton: false }">
 	<button
-		:class="{ 'btn btn-square bg-gradient-to-r from-pink-500 to-yellow-400 border-none fixed z-10 bottom-20 right-10' : showButton, 'btn btn-square bg-gradient-to-r from-pink-500 to-yellow-400 border-none fixed z-10 bottom-20 right-10 invisible' : !showButton }"
-		@scroll.window="showButton = (window.pageYOffset > 100) ? true : false"
-		@click.window="window.scrollTo({top: 0, behavior: 'smooth'})">
+		:class="{ 'btn btn-square bg-gradient-to-r from-pink-500 to-yellow-400 border-none fixed z-10 bottom-20 right-10' : showButton }"
+		@scroll.window="showButton = (window.pageYOffset > 50) ? true : false"
+		@click="window.scrollTo({top: 0, behavior: 'smooth'})">
 		<i class="fa-solid fa-chevron-up text-base-100"></i>
 	</button>
 </div>
