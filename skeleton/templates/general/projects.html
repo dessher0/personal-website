@@ -1,129 +1,216 @@
-{% extends 'layouts/layout.html' %}
-
-{% block content %}
+{% extends 'layouts/layout.html' %} {% block content %}
 <section class="relative h-full">
-    <div class="justify-center mx-auto h-full animate__animated animate__fadeIn animate__delay-.3s">
-        {% include 'parts/navbar.html' %}
-        <div class="py-8 lg:py-16 px-4 mb-10 mx-0 lg:mx-10">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">Meine Projekte</h2>
-            <div class="flex flex-col w-full lg:flex-row">
-                <div class="grid grid-rows-10 lg:grid-cols-4 gap-4 mt-10">
-                    <div class="card">
-                        <div class="card-body bg-gray-100 items-center">
-                            <h3 class="card-title">Kinect (Computer Vision)</h3>
-                            <p class="text-center mt-2 mb-2">Ein Program, das Bewegungen in Computer-Inputs umwandelt.
-                            </p>
-                            <label for="py-kinect"
-                                class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit">Anschauen</label>
-                            <!-- Put this part before </body> tag -->
-                            <input type="checkbox" id="py-kinect" class="modal-toggle" />
-                            <label for="py-kinect" class="modal cursor-pointer">
-                                <label class="modal-box w-11/12 max-w-6xl h-full" for="">
-                                    <h2 class="text-2xl font-bold text-center">Kinect (Computer Vision)</h2>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <h1>DEMNÄCHST</h1>
-                                    </div>
-                                </label>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body bg-gray-100 items-center">
-                            <h3 class="card-title">Just Dodge (Spiel)</h3>
-                            <p class="text-center mt-2 mb-2">Ein Platform-Scroller-Spiel mit Pygame im purem Python-Code
-                            </p>
-                            <label for="just-dodge"
-                                class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit">Anschauen</label>
-                            <!-- Put this part before </body> tag -->
-                            <input type="checkbox" id="just-dodge" class="modal-toggle" />
-                            <label for="just-dodge" class="modal cursor-pointer">
-                                <label class="modal-box w-11/12 max-w-6xl h-full" for="">
-                                    <h2 class="text-2xl font-bold text-center">Just Dodge</h2>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <h1>DEMNÄCHST</h1>
-                                    </div>
-                                </label>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body bg-gray-100 items-center">
-                            <h3 class="card-title">Zeitdilatationsrechner</h3>
-                            <p class="text-center mt-2 mb-2">Ein Rechner für die Zeit von sich schnell bewegenden
-                                Objekten.</p>
-                            <label for="calculator"
-                                class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit">Anschauen</label>
-                            <!-- Put this part before </body> tag -->
-                            <input type="checkbox" id="calculator" class="modal-toggle" />
-                            <label for="calculator" class="modal cursor-pointer">
-                                <label class="modal-box w-11/12 max-w-6xl h-full" for="">
-                                    <h2 class="text-2xl font-bold text-center">Zeitdilatationsrechner</h2>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <h1>DEMNÄCHST</h1>
-                                    </div>
-                                </label>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body bg-gray-100 items-center">
-                            <h3 class="card-title">OpenAI API</h3>
-                            <p class="text-center mt-2 mb-2">Eine OpenAI-API verbunden über Python mit der Website.</p>
-                            <label for="openai-api"
-                                class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit">Anschauen</label>
-                            <!-- Put this part before </body> tag -->
-                            <input type="checkbox" id="openai-api" class="modal-toggle" />
-                            <label for="openai-api" class="modal cursor-pointer">
-                                <label class="modal-box w-11/12 max-w-6xl h-full" for="">
-                                    <h2 class="text-2xl font-bold text-center">OpenAI API</h2>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <h1>DEMNÄCHST</h1>
-                                    </div>
-                                </label>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body bg-gray-100 items-center">
-                            <h3 class="card-title">Meine Website</h3>
-                            <p class="text-center mt-2 mb-2">Diese Website, gebaut mit dem Python-Framework (Flask) und
-                                TailwindCSS.</p>
-                            <label for="my-website"
-                                class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit">Anschauen</label>
-                            <!-- Put this part before </body> tag -->
-                            <input type="checkbox" id="my-website" class="modal-toggle" />
-                            <label for="my-website" class="modal cursor-pointer">
-                                <label class="modal-box w-11/12 max-w-6xl h-full" for="">
-                                    <h2 class="text-2xl font-bold text-center">Meine Website</h2>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <h1>DEMNÄCHST</h1>
-                                    </div>
-                                </label>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body bg-gray-100 items-center">
-                            <h3 class="card-title">Neurales Netzwerk</h3>
-                            <span class="text-error font-bold">(Work in Progress)</span>
-                            <p class="text-center mt-2 mb-2">Ein einfaches neurales Netzwark in Python gebaut.</p>
-                            <label for="neural-network"
-                                class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit">Anschauen</label>
-                            <!-- Put this part before </body> tag -->
-                            <input type="checkbox" id="neural-network" class="modal-toggle" />
-                            <label for="neural-network" class="modal cursor-pointer">
-                                <label class="modal-box w-11/12 max-w-6xl h-full" for="">
-                                    <h2 class="text-2xl font-bold text-center">Neurales Netzwerk</h2>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <h1>DEMNÄCHST</h1>
-                                    </div>
-                                </label>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div
+		class="justify-center mx-auto h-full animate__animated animate__fadeIn animate__delay-.3s">
+		{% include 'parts/navbar.html' %}
+		<div class="py-8 lg:py-16 px-4 mb-10 mx-0 lg:mx-10">
+			<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">
+				Meine Projekte
+			</h2>
+			<div class="flex flex-col w-full lg:flex-row">
+				<div class="grid grid-rows-10 lg:grid-cols-4 gap-4 mt-10">
+					<div class="card">
+						<div class="card-body bg-gray-100 items-center">
+							<h3 class="card-title">Kinect (Computer Vision)</h3>
+							<p class="text-center mt-2 mb-2">
+								Ein Program, das Bewegungen in Computer-Inputs
+								umwandelt.
+							</p>
+							<label
+								for="py-kinect"
+								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
+								>Anschauen</label
+							>
+							<input
+								type="checkbox"
+								id="py-kinect"
+								class="modal-toggle" />
+							<label for="py-kinect" class="modal cursor-pointer">
+								<label
+									class="modal-box w-11/12 max-w-6xl h-full"
+									for="">
+									<h2 class="text-2xl font-bold text-center">
+										Kinect (Computer Vision)
+									</h2>
+									<div
+										class="flex flex-col items-center justify-center">
+										<h1>DEMNÄCHST</h1>
+									</div>
+								</label>
+							</label>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-body bg-gray-100 items-center">
+							<h3 class="card-title">Just Dodge (Spiel)</h3>
+							<p class="text-center mt-2 mb-2">
+								Ein Platform-Scroller-Spiel mit Pygame im purem
+								Python-Code
+							</p>
+							<label
+								for="just-dodge"
+								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
+								>Anschauen</label
+							>
+							<input
+								type="checkbox"
+								id="just-dodge"
+								class="modal-toggle" />
+							<label
+								for="just-dodge"
+								class="modal cursor-pointer">
+								<label
+									class="modal-box w-11/12 max-w-6xl h-full"
+									for="">
+									<h2 class="text-2xl font-bold text-center">
+										Just Dodge
+									</h2>
+									<div
+										class="flex flex-col items-center justify-center">
+										<h1>DEMNÄCHST</h1>
+									</div>
+								</label>
+							</label>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-body bg-gray-100 items-center">
+							<h3 class="card-title">Zeitdilatationsrechner</h3>
+							<p class="text-center mt-2 mb-2">
+								Ein Rechner für die Zeit von sich schnell
+								bewegenden Objekten.
+							</p>
+							<label
+								for="calculator"
+								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
+								>Anschauen</label
+							>
+							<input
+								type="checkbox"
+								id="calculator"
+								class="modal-toggle" />
+							<label
+								for="calculator"
+								class="modal cursor-pointer">
+								<label
+									class="modal-box w-11/12 max-w-6xl h-full"
+									for="">
+									<h2 class="text-2xl font-bold text-center">
+										Zeitdilatationsrechner
+									</h2>
+									<div
+										class="flex flex-col items-center justify-center">
+										<h1>DEMNÄCHST</h1>
+									</div>
+								</label>
+							</label>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-body bg-gray-100 items-center">
+							<h3 class="card-title">OpenAI API</h3>
+							<p class="text-center mt-2 mb-2">
+								Eine OpenAI-API verbunden über Python mit der
+								Website.
+							</p>
+							<label
+								for="openai-api"
+								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
+								>Anschauen</label
+							>
+							<input
+								type="checkbox"
+								id="openai-api"
+								class="modal-toggle" />
+							<label
+								for="openai-api"
+								class="modal cursor-pointer">
+								<label
+									class="modal-box w-11/12 max-w-6xl h-full"
+									for="">
+									<h2 class="text-2xl font-bold text-center">
+										OpenAI API
+									</h2>
+									<div
+										class="flex flex-col items-center justify-center">
+										<h1>DEMNÄCHST</h1>
+									</div>
+								</label>
+							</label>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-body bg-gray-100 items-center">
+							<h3 class="card-title">Meine Website</h3>
+							<p class="text-center mt-2 mb-2">
+								Diese Website, gebaut mit dem Python-Framework
+								(Flask) und TailwindCSS.
+							</p>
+							<label
+								for="my-website"
+								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
+								>Anschauen</label
+							>
+							<input
+								type="checkbox"
+								id="my-website"
+								class="modal-toggle" />
+							<label
+								for="my-website"
+								class="modal cursor-pointer">
+								<label
+									class="modal-box w-11/12 max-w-6xl h-full"
+									for="">
+									<h2 class="text-2xl font-bold text-center">
+										Meine Website
+									</h2>
+									<div
+										class="flex flex-col items-center justify-center">
+										<h1>DEMNÄCHST</h1>
+									</div>
+								</label>
+							</label>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-body bg-gray-100 items-center">
+							<h3 class="card-title">Neurales Netzwerk</h3>
+							<span class="text-error font-bold"
+								>(Work in Progress)</span
+							>
+							<p class="text-center mt-2 mb-2">
+								Ein einfaches neurales Netzwark in Python
+								gebaut.
+							</p>
+							<label
+								for="neural-network"
+								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
+								>Anschauen</label
+							>
+							<input
+								type="checkbox"
+								id="neural-network"
+								class="modal-toggle" />
+							<label
+								for="neural-network"
+								class="modal cursor-pointer">
+								<label
+									class="modal-box w-11/12 max-w-6xl h-full"
+									for="">
+									<h2 class="text-2xl font-bold text-center">
+										Neurales Netzwerk
+									</h2>
+									<div
+										class="flex flex-col items-center justify-center">
+										<h1>DEMNÄCHST</h1>
+									</div>
+								</label>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock %}

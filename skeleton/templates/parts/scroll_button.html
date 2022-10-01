@@ -1,5 +1,7 @@
-<button
-    class="btn btn-square bg-gradient-to-r from-pink-500 to-yellow-400 border-none fixed z-10 bottom-20 right-10 ghost"
-    onclick="topFunction()" id="scroll_button">
-    <i class="fa-solid fa-chevron-up"></i>
-</button>
+<div x-data="{ showButton: false }">
+	<button
+		:class="{ 'btn btn-square bg-gradient-to-r from-pink-500 to-yellow-400 border-none fixed z-10 bottom-20 right-10' : showButton }"
+		@scroll.window="showButton = (window.pageYOffset > 20) ? true : false">
+		<i class="fa-solid fa-chevron-up"></i>
+	</button>
+</div>

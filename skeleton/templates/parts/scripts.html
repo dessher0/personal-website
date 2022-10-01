@@ -4,28 +4,30 @@
 <script src="https://unpkg.com/htmx.org@1.8.0"></script>
 
 <!-- Awesome Fonts -->
-<script src="https://kit.fontawesome.com/1d217afb8f.js" crossorigin="anonymous"></script>
+<script
+	src="https://kit.fontawesome.com/1d217afb8f.js"
+	crossorigin="anonymous"></script>
 
 <script>
-    if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
-    }
+	if (window.history.replaceState) {
+		window.history.replaceState(null, null, window.location.href)
+	}
 </script>
 
 <!-- OpenAI Page -->
 <script>
-    function showLoading() {
-        var element1 = document.getElementById("TextResultButton");
-        var element2 = document.getElementById("TextResultButtonIcon");
+	function showLoading() {
+		var element1 = document.getElementById('TextResultButton')
+		var element2 = document.getElementById('TextResultButtonIcon')
 
-        element2.classList.replace("fa-arrow-right", "-m-1");
-        element1.classList.add("loading");
-    }
+		element2.classList.replace('fa-arrow-right', '-m-1')
+		element1.classList.add('loading')
+	}
 </script>
 
 {% include 'parts/scroll_button.html' %}
 
-<!-- Scroll Button / All Pages -->
+<!-- Scroll Button / All Pages 
 <script>
     // Get the button:
     var scroll_button = document.getElementById("scroll_button");

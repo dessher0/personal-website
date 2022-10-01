@@ -1,54 +1,102 @@
-{% extends 'layouts/layout.html' %}
-
-{% block content %}
+{% extends 'layouts/layout.html' %} {% block content %}
 <section class="relative h-full mb-10">
-    <div class="animate__animated animate__fadeIn animate__delay-.3s">
-        {% include 'parts/navbar.html' %}
-        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">Kontaktiere mich!</h2>
-            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">Sind Sie interessiert mit mir
-                zusammenzuarbeiten? Kontaktieren Sie mich doch gerne und ich antworte Ihnen innerhalb von 24 Stunden.</p>
-            <form action="/contact/success" class="space-y-8" method="post" onsubmit="">
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                        <label for="name" class="block mb-2 text-sm font-medium">Name<label for="name" class="text-error">*</label></label>
-                        <input type="text" id="name" name="name"
-                            class="shadow-sm bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                            placeholder="Max Mustermann" required>
-                    </div>
-                    <div class="w-full md:w-1/2 px-3">
-                        <label for="email" class="block mb-2 text-sm font-medium">E-Mail<label for="email" class="text-error">*</label></label>
-                        <input type="email" id="email" name="email"
-                            class="shadow-sm bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                            placeholder="name@example.com" required>
-                    </div>
-                </div>
-                <div>
-                    <label for="subject" class="block mb-2 text-sm font-medium">Betreff<label for="subject" class="text-error">*</label></label>
-                    <input type="text" id="subject" name="subject"
-                        class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-500 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="Was ist Ihr Anliegen?" required>
-                </div>
-                <div class="sm:col-span-2">
-                    <label for="message" class="block mb-2 text-sm font-medium">Nachricht<label for="message" class="text-error">*</label></label>
-                    <textarea id="message" name="message" rows="8"
-                        class="block p-2.5 w-full min-h-12 max-h-56 text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-500 focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="Ihre Nachricht..." required></textarea>
-                </div>
-                <div class="flex justify-center">
-                    <input type="hidden" name="contact_form" value="contact_form">
-                    <button type="submit"
-                        class="btn bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit hover:animate-pulse focus:ring-4 focus:outline-none focus:ring-primary-300">Absenden</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="toast toast-end ghost z-50" id="success_toast">
-        <div class="alert alert-success">
-            <div>
-                <span>Nachricht erfolgreich abgesendet.</span>
-            </div>
-        </div>
-    </div>
+	<div class="animate__animated animate__fadeIn animate__delay-.3s">
+		{% include 'parts/navbar.html' %}
+		<div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+			<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">
+				Kontaktiere mich!
+			</h2>
+			<p
+				class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
+				Sind Sie interessiert mit mir zusammenzuarbeiten? Kontaktieren
+				Sie mich doch gerne und ich antworte Ihnen innerhalb von 24
+				Stunden.
+			</p>
+			<form
+				action="/contact/success"
+				class="space-y-8"
+				method="post"
+				onsubmit="">
+				<div class="flex flex-wrap -mx-3 mb-6">
+					<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+						<label for="name" class="block mb-2 text-sm font-medium"
+							>Name<label for="name" class="text-error"
+								>*</label
+							></label
+						>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							class="shadow-sm bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+							placeholder="Max Mustermann"
+							required />
+					</div>
+					<div class="w-full md:w-1/2 px-3">
+						<label
+							for="email"
+							class="block mb-2 text-sm font-medium"
+							>E-Mail<label for="email" class="text-error"
+								>*</label
+							></label
+						>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							class="shadow-sm bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+							placeholder="name@example.com"
+							required />
+					</div>
+				</div>
+				<div>
+					<label for="subject" class="block mb-2 text-sm font-medium"
+						>Betreff<label for="subject" class="text-error"
+							>*</label
+						></label
+					>
+					<input
+						type="text"
+						id="subject"
+						name="subject"
+						class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-500 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+						placeholder="Was ist Ihr Anliegen?"
+						required />
+				</div>
+				<div class="sm:col-span-2">
+					<label for="message" class="block mb-2 text-sm font-medium"
+						>Nachricht<label for="message" class="text-error"
+							>*</label
+						></label
+					>
+					<textarea
+						id="message"
+						name="message"
+						rows="8"
+						class="block p-2.5 w-full min-h-12 max-h-56 text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-500 focus:ring-primary-500 focus:border-primary-500"
+						placeholder="Ihre Nachricht..."
+						required></textarea>
+				</div>
+				<div class="flex justify-center">
+					<input
+						type="hidden"
+						name="contact_form"
+						value="contact_form" />
+					<button
+						type="submit"
+						class="btn bg-gradient-to-r from-pink-500 to-yellow-400 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit hover:animate-pulse focus:ring-4 focus:outline-none focus:ring-primary-300">
+						Absenden
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="toast toast-end ghost z-50" id="success_toast">
+		<div class="alert alert-success">
+			<div>
+				<span>Nachricht erfolgreich abgesendet.</span>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock %}

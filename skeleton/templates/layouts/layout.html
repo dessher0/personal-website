@@ -1,20 +1,16 @@
 {%block header%}
 <!DOCTYPE html>
 <html lang="de" dir="ltr" data-theme="light">
+	{% include 'parts/header.html' %} {% endblock %}
 
-{% include 'parts/header.html' %}
+	<body
+		class="flex flex-col h-screen min-h-screen bg-base-100 font-sans leading-normal tracking-normal">
+		{% block content %} {% endblock %}
+		<footer
+			class="footer footer-center p-4 bg-base-200 text-base-content rounded mt-auto">
+			{% include 'parts/footer.html' %}
+		</footer>
+	</body>
 
-{% endblock %}
-
-<body class="flex flex-col h-screen min-h-screen bg-base-100 font-sans leading-normal tracking-normal">
-    {% block content %}
-
-    {% endblock %}
-    <footer class="footer footer-center p-4 bg-base-200 text-base-content rounded mt-auto">
-        {% include 'parts/footer.html' %}
-    </footer>
-</body>
-
-{% include 'parts/scripts.html' %}
-
+	{% include 'parts/scripts.html' %}
 </html>
