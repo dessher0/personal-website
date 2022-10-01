@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="de" dir="ltr" data-theme="light">
+<html class="min-h-screen" lang="de" dir="ltr" data-theme="custom">
 	{%block header%} {%include "parts/header.html"%} {%endblock%}
 
 	<body
-		class="flex flex-col h-screen min-h-screen bg-base-100 font-sans leading-normal tracking-normal">
+		class="flex flex-col min-h-screen bg-base-100 font-sans leading-normal tracking-normal">
 		{% block content %} {% endblock %}
 		<footer
-			class="footer footer-center p-4 bg-base-200 text-base-content rounded mt-auto">
+			class="footer footer-center p-4 bg-gray-100 text-base-content rounded mt-20 sticky top-[100vh]">
 			{% include 'parts/footer.html' %}
 		</footer>
 	</body>
