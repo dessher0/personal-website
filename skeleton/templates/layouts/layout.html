@@ -3,12 +3,13 @@
 	{%block header%} {%include "parts/header.html"%} {%endblock%}
 
 	<body
-		class="flex flex-col min-h-screen bg-base-100 font-sans leading-normal tracking-normal">
+		:class=" scrollable ? 'flex flex-col min-h-screen bg-base-100 font-sans leading-normal tracking-normal' : 'flex flex-col min-h-screen bg-base-100 font-sans leading-normal tracking-normal overflow-hidden'"
+		x-data="{ scrollable: true }">
 		{% block content %} {% endblock %}
-		<footer
-			class="footer footer-center p-4 bg-gray-100 text-base-content rounded mt-20 sticky top-[100vh]">
-			{% include 'parts/footer.html' %}
-		</footer>
 	</body>
+	<footer
+		class="footer footer-center p-4 bg-gray-100 text-base-content rounded mt-20 sticky top-[100vh]">
+		{% include 'parts/footer.html' %}
+	</footer>
 	{% include 'parts/scroll_button.html' %} {% include 'parts/scripts.html' %}
 </html>

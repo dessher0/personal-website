@@ -8,7 +8,7 @@
 				Meine Projekte
 			</h2>
 			<div class="flex flex-col w-full lg:flex-row">
-				<div class="grid grid-rows-10 lg:grid-cols-4 gap-4 mt-10">
+				<div class="grid sm:grid-rows-10 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
 					<div class="card">
 						<div class="card-body bg-gray-100 items-center">
 							<h3 class="card-title">Kinect (Computer Vision)</h3>
@@ -16,19 +16,20 @@
 								Ein Program, das Bewegungen in Computer-Inputs
 								umwandelt.
 							</p>
-							<label
-								for="py-kinect"
+							<a
+								href="#python-kinect-cv"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
-								>Anschauen</label
+								x-on:click="scrollable = false"
+								>Anschauen</a
 							>
-							<input
-								type="checkbox"
-								id="py-kinect"
-								class="modal-toggle" />
-							<label for="py-kinect" class="modal cursor-pointer">
-								<label
-									class="modal-box w-11/12 max-w-6xl h-full"
-									for="">
+							<div class="modal" id="python-kinect-cv">
+								<div class="modal-box w-11/12 max-w-6xl h-full">
+									<a
+										href="#"
+										class="btn btn-sm btn-circle absolute right-2 top-2"
+										x-on:click="scrollable = true"
+										>X</a
+									>
 									<h2 class="text-2xl font-bold text-center">
 										Kinect (Computer Vision)
 									</h2>
@@ -36,8 +37,8 @@
 										class="flex flex-col items-center justify-center">
 										<h1>DEMNÄCHST</h1>
 									</div>
-								</label>
-							</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="card">
@@ -45,32 +46,31 @@
 							<h3 class="card-title">Just Dodge (Spiel)</h3>
 							<p class="text-center mt-2 mb-2">
 								Ein Platform-Scroller-Spiel mit Pygame im purem
-								Python-Code
+								Python-Code.
 							</p>
-							<label
-								for="just-dodge"
+							<a
+								href="#just-dodge"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
-								>Anschauen</label
+								x-on:click="scrollable = false"
+								>Anschauen</a
 							>
-							<input
-								type="checkbox"
-								id="just-dodge"
-								class="modal-toggle" />
-							<label
-								for="just-dodge"
-								class="modal cursor-pointer">
-								<label
-									class="modal-box w-11/12 max-w-6xl h-full"
-									for="">
+							<div class="modal" id="just-dodge">
+								<div class="modal-box w-11/12 max-w-6xl h-full">
+									<a
+										href="#"
+										class="btn btn-sm btn-circle absolute right-2 top-2"
+										x-on:click="scrollable = true"
+										>X</a
+									>
 									<h2 class="text-2xl font-bold text-center">
-										Just Dodge
+										Just Dodge (Spiel)
 									</h2>
 									<div
 										class="flex flex-col items-center justify-center">
 										<h1>DEMNÄCHST</h1>
 									</div>
-								</label>
-							</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="card">
@@ -80,21 +80,20 @@
 								Ein Rechner für die Zeit von sich schnell
 								bewegenden Objekten.
 							</p>
-							<label
-								for="calculator"
+							<a
+								href="#time-dilation-calculator"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
-								>Anschauen</label
+								x-on:click="scrollable = false"
+								>Anschauen</a
 							>
-							<input
-								type="checkbox"
-								id="calculator"
-								class="modal-toggle" />
-							<label
-								for="calculator"
-								class="modal cursor-pointer">
-								<label
-									class="modal-box w-11/12 max-w-6xl h-full"
-									for="">
+							<div class="modal" id="time-dilation-calculator">
+								<div class="modal-box w-11/12 max-w-6xl h-full">
+									<a
+										href="#"
+										class="btn btn-sm btn-circle absolute right-2 top-2"
+										x-on:click="scrollable = true"
+										>X</a
+									>
 									<h2 class="text-2xl font-bold text-center">
 										Zeitdilatationsrechner
 									</h2>
@@ -102,8 +101,8 @@
 										class="flex flex-col items-center justify-center">
 										<h1>DEMNÄCHST</h1>
 									</div>
-								</label>
-							</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="card">
@@ -113,21 +112,20 @@
 								Eine OpenAI-API verbunden über Python mit der
 								Website.
 							</p>
-							<label
-								for="openai-api"
+							<a
+								href="#openai-api"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
-								>Anschauen</label
+								x-on:click="scrollable = false"
+								>Anschauen</a
 							>
-							<input
-								type="checkbox"
-								id="openai-api"
-								class="modal-toggle" />
-							<label
-								for="openai-api"
-								class="modal cursor-pointer">
-								<label
-									class="modal-box w-11/12 max-w-6xl h-full"
-									for="">
+							<div class="modal" id="openai-api">
+								<div class="modal-box w-11/12 max-w-6xl h-full">
+									<a
+										href="#"
+										class="btn btn-sm btn-circle absolute right-2 top-2"
+										x-on:click="scrollable = true"
+										>X</a
+									>
 									<h2 class="text-2xl font-bold text-center">
 										OpenAI API
 									</h2>
@@ -135,8 +133,8 @@
 										class="flex flex-col items-center justify-center">
 										<h1>DEMNÄCHST</h1>
 									</div>
-								</label>
-							</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="card">
@@ -146,21 +144,20 @@
 								Diese Website, gebaut mit dem Python-Framework
 								(Flask) und TailwindCSS.
 							</p>
-							<label
-								for="my-website"
+							<a
+								href="#my-website"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
-								>Anschauen</label
+								x-on:click="scrollable = false"
+								>Anschauen</a
 							>
-							<input
-								type="checkbox"
-								id="my-website"
-								class="modal-toggle" />
-							<label
-								for="my-website"
-								class="modal cursor-pointer">
-								<label
-									class="modal-box w-11/12 max-w-6xl h-full"
-									for="">
+							<div class="modal" id="my-website">
+								<div class="modal-box w-11/12 max-w-6xl h-full">
+									<a
+										href="#"
+										class="btn btn-sm btn-circle absolute right-2 top-2"
+										x-on:click="scrollable = true"
+										>X</a
+									>
 									<h2 class="text-2xl font-bold text-center">
 										Meine Website
 									</h2>
@@ -168,8 +165,8 @@
 										class="flex flex-col items-center justify-center">
 										<h1>DEMNÄCHST</h1>
 									</div>
-								</label>
-							</label>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="card">
@@ -179,24 +176,23 @@
 								>(Work in Progress)</span
 							>
 							<p class="text-center mt-2 mb-2">
-								Ein einfaches neurales Netzwark in Python
-								gebaut.
+								Ein einfaches Neuronales Netzwerk gebaut in
+								Python.
 							</p>
-							<label
-								for="neural-network"
+							<a
+								href="#neural-network"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
-								>Anschauen</label
+								x-on:click="scrollable = false"
+								>Anschauen</a
 							>
-							<input
-								type="checkbox"
-								id="neural-network"
-								class="modal-toggle" />
-							<label
-								for="neural-network"
-								class="modal cursor-pointer">
-								<label
-									class="modal-box w-11/12 max-w-6xl h-full"
-									for="">
+							<div class="modal" id="neural-network">
+								<div class="modal-box w-11/12 max-w-6xl h-full">
+									<a
+										href="#"
+										class="btn btn-sm btn-circle absolute right-2 top-2"
+										x-on:click="scrollable = true"
+										>X</a
+									>
 									<h2 class="text-2xl font-bold text-center">
 										Neurales Netzwerk
 									</h2>
@@ -204,8 +200,8 @@
 										class="flex flex-col items-center justify-center">
 										<h1>DEMNÄCHST</h1>
 									</div>
-								</label>
-							</label>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -213,4 +209,10 @@
 		</div>
 	</div>
 </section>
+<script>
+	if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+		url = 'http://localhost:5001/projects'
+		window.location.href = url
+	}
+</script>
 {% endblock %}
