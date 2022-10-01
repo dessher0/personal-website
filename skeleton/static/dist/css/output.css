@@ -2191,10 +2191,6 @@ html {
   border-bottom-right-radius: var(--rounded-box, 1rem);
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .static {
   position: static;
 }
@@ -2215,6 +2211,10 @@ html {
   position: sticky;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .right-2 {
   right: 0.5rem;
 }
@@ -2225,10 +2225,6 @@ html {
 
 .top-\[100vh\] {
   top: 100vh;
-}
-
-.top-0 {
-  top: 0px;
 }
 
 .bottom-20 {
@@ -2562,8 +2558,8 @@ html {
   padding: 0.75rem;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-10 {
+  padding: 2.5rem;
 }
 
 .py-8 {
