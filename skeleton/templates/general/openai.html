@@ -25,7 +25,9 @@
 {{input_text|safe}}</textarea
 							>
 						</div>
-						<div class="card-actions justify-end mb-5 mr-5">
+						<div
+							class="card-actions justify-end mb-5 mr-5"
+							x-data="{ loading: false }">
 							<input
 								type="hidden"
 								name="ai_form"
@@ -33,10 +35,10 @@
 							<button
 								type="submit"
 								id="TextResultButton"
-								class="btn w-24 bg-gradient-to-r from-pink-500 to-yellow-400 border-none"
-								onclick="showLoading()">
+								:class="loading ? 'btn w-24 bg-gradient-to-r from-pink-500 to-yellow-400 border-none loading' : 'btn w-24 bg-gradient-to-r from-pink-500 to-yellow-400 border-none'"
+								x-on:click="loading = true">
 								<i
-									class="fa fa-arrow-right"
+									:class=" loading ? '-m-1' : 'fa fa-arrow-right'"
 									id="TextResultButtonIcon"></i>
 							</button>
 						</div>
