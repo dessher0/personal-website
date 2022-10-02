@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
-	{% include 'parts/header.html' %}
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>405 | Maciej Kula</title>
+
+		<!-- Tailwind CSS -->
+		<link
+			rel="stylesheet"
+			href="{{url_for('static',filename='dist/css/output.css')}}" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+		<!-- Add Favicon -->
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="{{ url_for('static', filename='images/favicon.png') }}" />
+	</head
 
 	<body
 		class="flex flex-col h-screen bg-base-100 font-sans leading-normal tracking-normal">
@@ -18,7 +39,7 @@
 				</p>
 				<a
 					href="/"
-					class="btn bg-gradient-to-r from-pink-500 to-yellow-400 border-none"
+					class="btn bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none"
 					>Zur Startseite</a
 				>
 			</div>

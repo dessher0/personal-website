@@ -3,7 +3,7 @@ from flask_mail import Mail, Message
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from ...config import config
-from ... import db, g_app
+from ... import g_app
 from ...apps.gpt3 import gpt3
 
 
@@ -48,7 +48,7 @@ def openai():
 
 @views.route("/contact", methods=["GET", "POST"])
 def contact():
-    return render_template("contact/form_page.html", **locals())
+    return render_template("general/contact/form_page.html", **locals())
 
 
 @views.route("/contact/success", methods=["POST"])
@@ -80,4 +80,4 @@ def contact_success():
 
         mail.send(msg)
 
-    return render_template("contact/success.html", **locals())
+    return render_template("general/contact/success.html", **locals())

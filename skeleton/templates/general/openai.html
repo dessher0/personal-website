@@ -1,4 +1,6 @@
-{% extends 'layouts/layout.html' %} {% block content %}
+{% extends 'layouts/layout.html' %} {% block header %}
+<title>OpenAI | Maciej Kula</title>
+{% endblock %} {% block content %}
 <section class="relative h-full">
 	<div
 		class="justify-center mx-auto h-full animate__animated animate__fadeIn animate__delay-.3s">
@@ -14,7 +16,7 @@
 							Eingabe
 						</h1>
 					</div>
-					<form class="" action="/openai" method="post">
+					<form class="" action="/openai" method="post" name="OpenAI-Form">
 						<div class="card-body">
 							<textarea
 								class="focus:outline-none resize-none w-full bg-gray-100"
@@ -63,9 +65,7 @@
 					<div class="card-actions justify-end mb-5 mr-5 ghost">
 						<input type="hidden" />
 						<button type="" class="btn px-10">
-							<i
-								class="fa fa-arrow-right"
-								id="TextResultButtonIcon"></i>
+							<i class="fa fa-arrow-right"></i>
 						</button>
 					</div>
 				</div>

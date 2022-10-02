@@ -1,4 +1,6 @@
-{% extends 'layouts/layout.html' %} {% block content %}
+{% extends 'layouts/layout.html' %} {% block header %}
+<title>Startseite | Maciej Kula</title>
+{% endblock %} {% block content %}
 <section class="relative h-full">
 	<div
 		class="text-center items-center justify-center h-full mx-auto animate__animated animate__fadeIn animate__delay-.3s">
@@ -25,7 +27,7 @@
 					<pre data-prefix="5"><code></code></pre>
 					<pre
 						data-prefix="6"
-						class="bg-error text-error-content"><code>visit(<a class="hover:text-base-100" href="https://github.com/dessher0" target="_blank" rel="noopener noreferrer">'https://github.com/dessher0'</a>)</code></pre>
+						class="bg-error text-error-content"><code>visit(<a href="#github-profile" class="hover:text-base-100" x-on:click="scrollable = false, window.scrollTo({top: 0, behavior: 'smooth'})">'https://github.com/dessher0'</a>)</code></pre>
 				</div>
 			</div>
 			<div class="col mt-20">

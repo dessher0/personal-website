@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html class="min-h-screen" lang="de" dir="ltr" data-theme="custom">
-	{%block header%} {%include "parts/header.html"%} {%endblock%}
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		{%block header%} {%endblock%}
+		<!-- Tailwind CSS -->
+		<link
+			rel="stylesheet"
+			href="{{url_for('static',filename='dist/css/output.css')}}" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+		<!-- Add Favicon -->
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="{{ url_for('static', filename='images/favicon.png') }}" />
+	</head>
 
 	<body
 		:class=" scrollable ? 'flex flex-col min-h-screen bg-base-100 font-sans leading-normal tracking-normal' : 'flex flex-col min-h-screen bg-base-100 font-sans leading-normal tracking-normal overflow-hidden'"

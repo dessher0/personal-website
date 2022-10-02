@@ -1,4 +1,6 @@
-{% extends 'layouts/layout.html' %} {% block content %}
+{% extends 'layouts/layout.html' %} {% block header %}
+<title>Projekte | Maciej Kula</title>
+{% endblock %} {% block content %}
 <section class="relative h-full">
 	<div
 		class="justify-center mx-auto h-full animate__animated animate__fadeIn animate__delay-.3s">
@@ -21,14 +23,14 @@
 								href="#python-kinect-cv"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
 								x-on:click="scrollable = false, window.scrollTo({top: 0})">
-								>Anschauen</a
+								Anschauen</a
 							>
 							<div class="modal" id="python-kinect-cv">
 								<div class="modal-box w-11/12 max-w-6xl h-full">
 									<div class="sticky top-0 z-10">
 										<a
 											href="#"
-											class="btn btn-sm btn-circle absolute right-2 top-2"
+											class="btn btn-sm btn-square absolute right-1 top-1"
 											x-on:click="scrollable = true"
 											>X</a
 										>
@@ -61,14 +63,14 @@
 								href="#just-dodge"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
 								x-on:click="scrollable = false, window.scrollTo({top: 0})">
-								>Anschauen</a
+								Anschauen</a
 							>
 							<div class="modal" id="just-dodge">
 								<div class="modal-box w-11/12 max-w-6xl h-full">
 									<div class="sticky top-0 z-10">
 										<a
 											href="#"
-											class="btn btn-sm btn-circle absolute right-2 top-2"
+											class="btn btn-sm btn-square absolute right-2 top-2"
 											x-on:click="scrollable = true"
 											>X</a
 										>
@@ -101,14 +103,14 @@
 								href="#time-dilation-calculator"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
 								x-on:click="scrollable = false, window.scrollTo({top: 0})">
-								>Anschauen</a
+								Anschauen</a
 							>
 							<div class="modal" id="time-dilation-calculator">
 								<div class="modal-box w-11/12 max-w-6xl h-full">
 									<div class="sticky top-0 z-10">
 										<a
 											href="#"
-											class="btn btn-sm btn-circle absolute right-2 top-2"
+											class="btn btn-sm btn-square absolute right-2 top-2"
 											x-on:click="scrollable = true"
 											>X</a
 										>
@@ -141,14 +143,14 @@
 								href="#openai-api"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
 								x-on:click="scrollable = false, window.scrollTo({top: 0})">
-								>Anschauen</a
+								Anschauen</a
 							>
 							<div class="modal" id="openai-api">
 								<div class="modal-box w-11/12 max-w-6xl h-full">
 									<div class="sticky top-0 z-10">
 										<a
 											href="#"
-											class="btn btn-sm btn-circle absolute right-2 top-2"
+											class="btn btn-sm btn-square absolute right-2 top-2"
 											x-on:click="scrollable = true"
 											>X</a
 										>
@@ -181,14 +183,14 @@
 								href="#my-website"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
 								x-on:click="scrollable = false, window.scrollTo({top: 0})">
-								>Anschauen</a
+								Anschauen</a
 							>
 							<div class="modal" id="my-website">
 								<div class="modal-box w-11/12 max-w-6xl h-full">
 									<div class="sticky top-0 z-10">
 										<a
 											href="#"
-											class="btn btn-sm btn-circle absolute right-2 top-2"
+											class="btn btn-sm btn-square absolute right-2 top-2"
 											x-on:click="scrollable = true"
 											>X</a
 										>
@@ -224,16 +226,18 @@
 								href="#neural-network"
 								class="btn modal-button bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit"
 								x-on:click="scrollable = false, window.scrollTo({top: 0})">
-								>Anschauen</a
+								Anschauen</a
 							>
 							<div class="modal" id="neural-network">
 								<div class="modal-box w-11/12 max-w-6xl h-full">
-									<a
-										href="#"
-										class="btn btn-sm btn-circle absolute right-2 top-2"
-										x-on:click="scrollable = true"
-										>X</a
-									>
+									<div class="sticky top-0 z-10">
+										<a
+											href="#"
+											class="btn btn-sm btn-square absolute right-2 top-2"
+											x-on:click="scrollable = true"
+											>X</a
+										>
+									</div>
 									<h2 class="text-2xl font-bold text-center">
 										Neurales Netzwerk
 									</h2>
@@ -256,6 +260,7 @@
 		</div>
 	</div>
 </section>
+
 <script>
 	if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
 		url = 'https://www.mcjkula.com/projects'

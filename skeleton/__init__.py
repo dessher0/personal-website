@@ -1,10 +1,7 @@
 from flask import Flask, render_template
 from flask_compress import Compress
-from flask_sqlalchemy import SQLAlchemy
-from os import path
 from .config import config
 
-db = SQLAlchemy()
 compress = Compress()
 g_app = None
 
@@ -15,14 +12,10 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(config["development"])
 
-    db.init_app(app)
-
     g_app = app
 
-    from .frontend.general.routing import views
-    from .frontend.js.routing import js_views
-
-    from .models.user import User
+    from .components.general.routing import views
+    from .components.js.routing import js_views
 
     def page_not_found(e):
         return render_template("errors/404.html"), 404
@@ -39,9 +32,6 @@ def create_app():
 
     app.register_blueprint(views, url_prefix="/")
     app.register_blueprint(js_views, url_prefix="/js/")
-
-    app.app_context().push()
-    db.create_all()
 
     compress.init_app(app)
 
