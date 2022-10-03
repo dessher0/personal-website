@@ -5,7 +5,6 @@ from flask_limiter.util import get_remote_address
 from flask_httpauth import HTTPBasicAuth
 from ...config import config
 from ... import g_app
-from ...models.users import users
 from ...apps.gpt3 import gpt3
 from werkzeug.security import check_password_hash
 
@@ -14,6 +13,7 @@ views = Blueprint("views", __name__)
 mail = Mail(g_app)
 limiter = Limiter(g_app, key_func=get_remote_address)
 auth = HTTPBasicAuth()
+users = config["development"].USERS
 
 
 @auth.error_handler
