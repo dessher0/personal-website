@@ -2,3 +2,4 @@
 skeleton/config.py
 skeleton/databases
 deploy.py
+/skeleton/models
