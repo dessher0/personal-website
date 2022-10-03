@@ -1,0 +1,58 @@
+{% extends 'layouts/layout.html' %} {% block header %}
+<title>Spiele | Maciej Kula</title>
+{% endblock %} {% block content %}
+<section class="relative h-full">
+	<div
+		class="justify-center mx-auto h-full animate__animated animate__fadeIn animate__delay-.3s">
+		{% include 'parts/navbar.html' %}
+		<div class="mx-0 lg:mx-10 py-8 lg:py-16 px-4">
+			<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">
+				Spiele
+			</h2>
+			<div class="flex flex-col w-full lg:flex-row justify-center">
+				<div
+					class="grid sm:grid-rows-10 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-10 justify-center w-full">
+					<div class="card">
+						<div
+							class="card-body bg-gray-100 hover:bg-gray-50 items-center h-144"
+							onclick="location.href = '#just-dodge';"
+							x-data="{ show1Text: false }"
+							@mouseover="show1Text = true"
+							@mouseleave="show1Text = false">
+							<h3 class="card-title text-3xl font-bold">
+								Just Dodge
+							</h3>
+							<span class="text-error font-bold mb-10 lg:mb-44"
+								>DISCONTINUED</span
+							>
+							<p
+								:class=" show1Text ? 'text-4xl text-transparent bg-gradient-to-br from-pink-500 to-yellow-400 bg-clip-text font-extrabold' : 'ghost'">
+								ANSCHAUEN
+							</p>
+						</div>
+					</div>
+					<div class="card">
+						<div
+							class="card-body bg-gray-100 hover:bg-gray-50 items-center justify-center h-144"
+							onclick="location.href = '#dimension-jump';"
+							x-data="{ show2Text: false }"
+							@mouseover="show2Text = true"
+							@mouseleave="show2Text = false">
+							<h3 class="card-title text-3xl font-bold">
+								Dimension Jump
+							</h3>
+							<span class="text-warning font-bold mb-10 lg:mb-44"
+								>ALPHA</span
+							>
+							<p
+								:class=" show2Text ? 'text-4xl text-transparent bg-gradient-to-br from-pink-500 to-yellow-400 bg-clip-text font-extrabold font-' : 'ghost'">
+								ANSCHAUEN
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
