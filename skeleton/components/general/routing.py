@@ -72,7 +72,7 @@ def contact():
 
 
 @views.route("/contact/success", methods=["POST"])
-@limiter.limit("5/day")
+@limiter.limit(config["development"].LIMITER_DEFAULT)
 def contact_success():
     if "contact_form" in request.form:
         name = request.form["name"]
@@ -83,7 +83,7 @@ def contact_success():
         msg = Message(
             subject,
             sender=config["development"].MAIL_DEFAULT_SENDER,
-            recipients=["website@mcjkula.com"],
+            recipients=[config["development"].MAIL_DEFAULT_RECIPIENT]
         )
         msg.body = (
             "Nachricht von "
