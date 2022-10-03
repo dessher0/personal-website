@@ -4,7 +4,8 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_httpauth import HTTPBasicAuth
 from ...config import config
-from ... import g_app, users
+from ... import g_app
+from ...models.users import users
 from ...apps.gpt3 import gpt3
 from werkzeug.security import check_password_hash
 
