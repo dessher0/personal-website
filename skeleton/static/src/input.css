@@ -5,3 +5,7 @@
 .ghost {
     visibility: hidden;
   }
+
+.h-144 {
+    height: 36rem;
+  }
