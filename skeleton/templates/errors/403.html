@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>403 | Maciej Kula</title>
+
+		<!-- Tailwind CSS -->
+		<link
+			rel="stylesheet"
+			href="{{url_for('static',filename='dist/css/output.css')}}" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+		<!-- Add Favicon -->
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="{{ url_for('static', filename='images/favicon.png') }}" />
+	</head>
+
+	<body
+		class="flex flex-col h-screen bg-base-100 font-sans leading-normal tracking-normal">
+		<div class="flex items-center justify-center h-full -mt-10">
+			<div class="text-center">
+				<h1
+					class="text-8xl text-transparent bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text font-bold">
+					403
+				</h1>
+				<p class="text-xl m-5">
+					<span class="text-error font-bold"
+						>Die Daten stimmen nicht überein!</span
+					>
+					Bitte gehen Sie zurück zur Startseite.
+				</p>
+				<a
+					href="/"
+					class="btn bg-gradient-to-r from-pink-500 to-yellow-400 text-base-100 border-none"
+					>Zur Startseite</a
+				>
+			</div>
+		</div>
+	</body>
+</html>
