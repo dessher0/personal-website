@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .ghost {
-    visibility: hidden;
-  }
+  visibility: hidden;
+}
 
 .h-144 {
-    height: 36rem;
-  }
+  height: 36rem;
+}
